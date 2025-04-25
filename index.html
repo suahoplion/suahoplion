@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+main{
+    height: 100vh;
+}
+        a {
+        text-decoration: none;
+        color: #fff;
+         }
+
+        .navbar {
+        position: relative; 
+        width: 100%;
+        padding: 25px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        }
+        .navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.navbar ul li::after  {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+body {
+    background: rgb(17, 17, 17);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: absolute;
+    top: 0;
+
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.head {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(235, 51, 91, 0.582);
+    text-align: center;
+    text-shadow: 4px 4px 4px #f5f3f3;
+}
+
+header {
+    /* position: fixed;
+    top: 0; */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 50px;
+}
+.bodypage {
+    max-width: 1200px;
+    margin: 200px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .logo img {
+    width: 10vh;      
+    height: 10vh;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+
+  .toast {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .toast.show {
+    visibility: visible;
+    opacity: 1;
+  }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="#" onclick="showComingSoon(event)">Library</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+   
+  <div class="head">WELCOME TO NLD</div>
+
+  
+  <div class="bodypage">
+    <ul class="list">
+      <li>
+        Trang web game <strong>NLD</strong> được xây dựng nhằm mục tiêu thực hành và áp dụng các kiến thức đã học trong học phần Thiết kế Web, bao gồm HTML, CSS và JavaScript. Giao diện được thiết kế thân thiện với người dùng, dễ sử dụng, phù hợp với mọi đối tượng yêu thích trò chơi điện tử.
+      </li>
+      <li>
+        Trang web bao gồm các chức năng cơ bản như đăng nhập, đăng ký, giới thiệu game và nút mua hàng minh họa. Giao diện sử dụng hiệu ứng làm mờ nền (glassmorphism) hiện đại, kết hợp với icon và bố cục responsive.
+      </li>
+      <li>
+        Qua việc xây dựng trang web này, em đã củng cố được kỹ năng lập trình giao diện, cách tổ chức file HTML – CSS – JS, xử lý tương tác người dùng và kiểm tra dữ liệu đầu vào. Đây là nền tảng quan trọng cho việc phát triển các ứng dụng web hoàn chỉnh trong tương lai.
+      </li>
+    </ul>
+  </div>
+
+  <div id="toast" class="toast">Trang chưa được cập nhật thông tin. Vui lòng quay lại sau!</div>
+  <script src="js.js"></script>
+</body>
+</html>
